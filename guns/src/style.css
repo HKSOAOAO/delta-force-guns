@@ -1,0 +1,37 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  background: #121212;
+  color: #eee;
+  padding: 20px;
+}
+
+.tabs {
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tab-button.active {
+  background: #007bff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+ul {
+  list-style: square;
+  margin-left: 20px;
+}
