@@ -1,113 +1,179 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <title>guns</title>
-  <link rel="stylesheet" href="./style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Delta Force Guns</title>
+  <style>
+    body {
+      font-family: "Microsoft JhengHei", sans-serif;
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 10px;
+      background-color: #f0f0f0;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    nav {
+      margin-bottom: 20px;
+    }
+    nav button {
+      margin-right: 10px;
+      padding: 8px 15px;
+      font-size: 14px;
+      cursor: pointer;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+    }
+    nav button.active {
+      background-color: #f39c12;
+    }
+    .gun-info {
+      display: none;
+      background: white;
+      padding: 15px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgb(0 0 0 / 0.1);
+    }
+    .gun-info.active {
+      display: block;
+    }
+    img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div class="tabs">
-  <button class="tab-button active" data-tab="assault">突擊步槍</button>
-  <button class="tab-button" data-tab="lmg">輕機槍</button>
-  <button class="tab-button" data-tab="smg">衝鋒槍</button>
-  <button class="tab-button" data-tab="sniper">狙擊步槍</button>
-</div>
+  <h1>Delta Force 槍枝介紹</h1>
 
-<!-- 突擊步槍 -->
-<div class="tab-content active" id="assault">
-  <!-- CAR-15 -->
-  <h2>CAR‑15 突擊步槍</h2>
-  <!-- 圖片放置處 -->
-  <img src="https://i.postimg.cc/QMyLCDsW/2025-06-11-200102.png" alt="CAR‑15圖" style="width:300px; height:auto;">
-<ul>
-  <ul>
-    <li>子彈：5.56×45mm NATO </li>
-    <li>可裝配件：槍口、槍管、槍托、握把、導軌、瞄具、彈匣等</li>
-    <li>後座力 & 彈道：中等偏低，穩定易控 {index=3}</li>
-  </ul>
+  <nav>
+    <button class="tab-button active" data-tab="assault">突擊步槍</button>
+    <button class="tab-button" data-tab="lmg">輕機槍</button>
+    <button class="tab-button" data-tab="smg">衝鋒槍</button>
+    <button class="tab-button" data-tab="sniper">狙擊步槍</button>
+  </nav>
 
-  <!-- M4A1 -->
-  <h2>M4A1 突擊步槍</h2>
-    <img src="https://i.postimg.cc/GtPSFn0K/2025-06-11-200128.png" alt="M4A1圖" style="width:300px; height:auto;">
+  <!-- 突擊步槍 -->
+  <section id="assault" class="gun-info active">
+    <h2>突擊步槍</h2>
 
-  <ul>
-    <li>子彈：5.56×45mm NATO </li>
-    <li>常見配件：海神消焰器、共振二代前握把、45發擴容彈匣、幻影後握把、416輕型槍托、Cobra準星、精英長槍管等 </li>
-    <li>後座力 & 彈道：高射速但控槍穩定，遠中近皆適用 </li>
-  </ul>
+    <h3>CAR-15 突擊步槍</h3>
+    <img src="https://i.postimg.cc/QMyLCDsW/2025-06-11-200102.png" alt="CAR-15" />
+    <ul>
+      <li>子彈：5.56×45mm NATO</li>
+      <li>可裝配件：槍口、槍管、槍托、握把、導軌、瞄具、彈匣等</li>
+      <li>後座力 & 彈道：中等偏低，穩定易控</li>
+    </ul>
 
-  <!-- M16A4 -->
-  <h2>M16A4 突擊步槍</h2>
-  <img src="https://i.postimg.cc/MKDFXwmK/2025-06-11-200115.png" alt="M16A4圖" style="width:300px; height:auto;">
-  <ul>
-    <li>子彈：5.56×45mm NATO</li>
-    <li>配件建議：中遠距離瞄準鏡、架槍所需槍托</li>
-    <li>後座力 & 彈道：三連發模式下彈道偏右，需控槍技巧。</li>
-  </ul>
-</div>
+    <h3>M4A1 突擊步槍</h3>
+    <img src="PLACEHOLDER_FOR_M4A1_IMAGE" alt="M4A1" />
+    <ul>
+      <li>子彈：5.56×45mm NATO</li>
+      <li>可裝配件：槍口、槍管、槍托、握把、瞄具、彈匣</li>
+      <li>後座力 & 彈道：穩定且可控</li>
+    </ul>
 
-<!-- 輕機槍 -->
-<div class="tab-content" id="lmg">
-  <h2>M249 輕機槍</h2>
-  <img src="https://i.postimg.cc/15JvsHy8/2025-06-11-200204.png" alt="M249圖" style="width:300px; height:auto;">
-  <ul>
-    <li>子彈：5.56×45mm NATO</li>
-    <li>可配件：腳架、大彈匣、瞄準鏡等</li>
-    <li>後座力 & 彈道：後座大、彈道偏斜，需要高控槍設定</li>
-  </ul>
-</div>
+    <h3>M16A4 突擊步槍</h3>
+    <img src="PLACEHOLDER_FOR_M16A4_IMAGE" alt="M16A4" />
+    <ul>
+      <li>子彈：5.56×45mm NATO</li>
+      <li>可裝配件：槍口、握把、瞄具、彈匣</li>
+      <li>後座力 & 彈道：準確且後座力中等</li>
+    </ul>
+  </section>
 
-<!-- 衝鋒槍 -->
-<div class="tab-content" id="smg">
-  <h2>Uzi 衝鋒槍</h2>
-  <img src="https://i.postimg.cc/DyFN20sM/2025-06-11-200145.png" alt="Uzi圖" style="width:300px; height:auto;">
-  <ul>
-    <li>子彈：9×19mm</li>
-    <li>可配件：槍口、槍管、槍托、握把、導軌、瞄具、彈匣座等</li>
-    <li>後座力 & 彈道：後座較低、射速快，面對步兵表現優秀</li>
-  </ul>
+  <!-- 輕機槍 -->
+  <section id="lmg" class="gun-info">
+    <h2>輕機槍</h2>
 
-  <h2>MP5 衝鋒槍</h2>
-  <img src="https://i.postimg.cc/0573RD6S/2025-06-11-200153.png" alt="MP5圖" style="width:300px; height:auto;">
-  <ul>
-    <li>子彈：9×19mm </li>
-    <li>可裝備：槍口、槍管、握把、導軌、瞄具、彈匣座等 </li>
-    <li>後座力 & 彈道：全能穩定，腰射及開鏡皆可控性高 </li>
-  </ul>
-</div>
+    <h3>M249 輕機槍</h3>
+    <img src="PLACEHOLDER_FOR_M249_IMAGE" alt="M249" />
+    <ul>
+      <li>子彈：5.56×45mm NATO</li>
+      <li>可裝配件：槍口、握把、瞄具、彈匣</li>
+      <li>後座力 & 彈道：後座力較大，連射需控制</li>
+    </ul>
+  </section>
 
-<!-- 狙擊步槍 -->
-<div class="tab-content" id="sniper">
-  <h2>R93 狙擊步槍</h2>
-  <img src="https://i.postimg.cc/hjWrpZ15/2025-06-11-200226.png" alt="R93圖" style="width:300px; height:auto;">
-  <ul>
-    <li>子彈：7.62mm</li>
-    <li>可配件：高倍鏡等</li>
-    <li>後座力 & 彈道：單發穩定、回座中等</li>
-  </ul>
+  <!-- 衝鋒槍 -->
+  <section id="smg" class="gun-info">
+    <h2>衝鋒槍</h2>
 
-  <h2>SR98 狙擊步槍</h2>
-    <img src="https://i.postimg.cc/4yX1TKMv/2025-06-11-200235.png" alt="SR98圖" style="width:300px; height:auto;">
+    <h3>Uzi 衝鋒槍</h3>
+    <img src="PLACEHOLDER_FOR_UZI_IMAGE" alt="Uzi" />
+    <ul>
+      <li>子彈：9×19mm Parabellum</li>
+      <li>可裝配件：槍口、握把、瞄具、彈匣</li>
+      <li>後座力 & 彈道：輕微後座，易控制</li>
+    </ul>
 
-  <ul>
-    <li>子彈：7.62mm</li>
-    <li>可配件：8倍鏡、槍托等</li>
-    <li>後座力 & 彈道：低回座、准度高</li>
-  </ul>
+    <h3>MP5 衝鋒槍</h3>
+    <img src="PLACEHOLDER_FOR_MP5_IMAGE" alt="MP5" />
+    <ul>
+      <li>子彈：9×19mm Parabellum</li>
+      <li>可裝配件：槍口、握把、瞄具、彈匣</li>
+      <li>後座力 & 彈道：穩定，適合近戰</li>
+    </ul>
+  </section>
 
-  <h2>AWM 狙擊步槍</h2>
-      <img src="https://i.postimg.cc/25BGdNhW/2025-06-11-200216.png" alt="AWM圖" style="width:300px; height:auto;">
+  <!-- 狙擊步槍 -->
+  <section id="sniper" class="gun-info">
+    <h2>狙擊步槍</h2>
 
-  <ul>
-    <li>子彈：.338 Lapua Magnum</li>
-    <li>可配件：高倍鏡、消音器等</li>
-    <li>後座力 & 彈道：後座強但彈道穩定可控</li>
-  </ul>
-</div>
-<!-- partial -->
-  <script  src="./script.js"></script>
+    <h3>R93 狙擊步槍</h3>
+    <img src="PLACEHOLDER_FOR_R93_IMAGE" alt="R93" />
+    <ul>
+      <li>子彈：.338 Lapua Magnum</li>
+      <li>可裝配件：槍口、瞄具、槍托</li>
+      <li>後座力 & 彈道：強大，遠距離準確</li>
+    </ul>
 
+    <h3>SR98 狙擊步槍</h3>
+    <img src="PLACEHOLDER_FOR_SR98_IMAGE" alt="SR98" />
+    <ul>
+      <li>子彈：.300 Winchester Magnum</li>
+      <li>可裝配件：槍口、瞄具、槍托</li>
+      <li>後座力 & 彈道：強大，精準射擊</li>
+    </ul>
+
+    <h3>AWM 狙擊步槍</h3>
+    <img src="PLACEHOLDER_FOR_AWM_IMAGE" alt="AWM" />
+    <ul>
+      <li>子彈：.300 Winchester Magnum</li>
+      <li>可裝配件：槍口、瞄具、槍托</li>
+      <li>後座力 & 彈道：極強，最高精準度</li>
+    </ul>
+  </section>
+
+  <script>
+    // Tab 切換功能
+    const buttons = document.querySelectorAll("nav button");
+    const sections = document.querySelectorAll(".gun-info");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // 移除所有按鈕 active
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+
+        // 隱藏所有區塊
+        sections.forEach((sec) => sec.classList.remove("active"));
+
+        // 顯示對應區塊
+        const target = btn.getAttribute("data-tab");
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
 </body>
 </html>
